@@ -84,7 +84,6 @@ angular.module('picklist').filter('transformEntries', ["$filter",
   function($filter) {
     return function(input, filterString, transformFunc) {
       return $filter('filter')(input, filterString, function(actual, expected) {
-        console.log(JSON.stringify(input));
         actual = ('' + transformFunc(actual)).toLowerCase();
         expected = ('' + expected).toLowerCase();
         return actual.indexOf(expected) !== -1;
