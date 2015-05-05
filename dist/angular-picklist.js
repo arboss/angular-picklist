@@ -81,7 +81,7 @@ angular.module('picklist', []).directive('picklist', [
   }
 ]);
 angular.module('picklist').filter('transformEntries', ["$filter",
-  function("$filter") {
+  function($filter) {
     return function(input, filterString, transformFunc) {
       return $filter('filter')(input, filterString, function(actual, expected) {
         actual = ('' + transformFunc(actual)).toLowerCase();
