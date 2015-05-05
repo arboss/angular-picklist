@@ -82,12 +82,17 @@ angular.module('picklist', []).directive('picklist', [
 ]);
 angular.module('picklist').filter('transformEntries', ["$filter",
   function($filter) {
-    return function(input, filterString, transformFunc) {
-      return $filter('filter')(input, filterString, function(actual, expected) {
-        actual = ('' + transformFunc(actual)).toLowerCase();
-        expected = ('' + expected).toLowerCase();
-        return actual.indexOf(expected) !== -1;
+    return function(items, filterString, transformFunc) {
+      var filtered = [];
+
+      angular.forEach(items, function(item) {
+        var actual = ('' + transformFunc(item)).toLowerCase();
+        var expected = ('' + filterString).toLowerCase();
+        if (actual.indexOf(expected) !== -1)
+          filtered.push(item);
       });
+
+      return filtered;
     };
   }
 ]);
