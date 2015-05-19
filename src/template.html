@@ -1,0 +1,40 @@
+<div class="container-fluid" ng-cloak>
+  <div class="row">
+    <div class="small-5 columns">
+      <input placeholder="Search" type="text" class="picklist-filter form-control" ng-model="leftFilter"/>
+      <select class="picklist-select" multiple="multiple" ng-multiple="true" ng-model="leftSelected" ng-options="transformText(r) for r in leftListRowsModel | transformEntries:leftFilter:transformText" ng-style="listCss">
+      </select>
+    </div>
+    <div class="small-2 columns text-center">
+      <div>
+        <button type="button" class="button tiny expand" ng-click="moveRightSelected()">
+        <i class="fa fa-forward fa-fw">
+        </i>
+        </button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="button tiny expand" ng-click="moveRightAll()" ng-show="showAllButtons">
+        <i class="fa fa-fast-forward fa-fw">
+        </i>
+        </button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="button tiny expand" ng-click="moveLeftSelected()">
+        <i class="fa fa-backward fa-fw">
+        </i>
+        </button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="button tiny expand" ng-click="moveLeftAll()" ng-show="showAllButtons">
+        <i class="fa fa-fast-backward fa-fw">
+        </i>
+        </button>
+      </div>
+    </div>
+    <div class="small-5 columns">
+      <input placeholder="Search" type="text" class="picklist-filter form-control" ng-model="rightFilter"/>
+      <select class="picklist-select" multiple="multiple" ng-model="rightSelected" ng-options="transformText(r) for r in rightListRowsModel | transformEntries:rightFilter:transformText" ng-style="listCss">
+      </select>
+    </div>
+  </div>
+</div>

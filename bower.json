@@ -12,7 +12,6 @@
   ],
   "dependencies": {
     "angular": "",
-    "angular-mocks": "",
     "lodash": "~2.4.1"
   }
 }
