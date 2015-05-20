@@ -1,15 +1,11 @@
 {
   "author": {
-    "name": "Igor Kvasnicka"
+    "name": "Igor Kvasnicka / Armin Boss"
   },
   "name": "angular-picklist",
   "version": "1.0.0",
   "license": "CC BY 4.0",
-  "homepage": "https://github.com/IgorKvasn/angular-picklist",
-  "ignore": [
-    "demo",
-    "test"
-  ],
+  "homepage": "https://github.com/arboss/angular-picklist",
   "dependencies": {
     "angular": "",
     "lodash": "~2.4.1"
