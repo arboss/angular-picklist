@@ -9,6 +9,11 @@ There is one important feature to be mentioned: lists are searchable :)
     + (Markup uses Foundation classes, but can be ignored)
 - Lodash
 
+##Installation
+```
+bower install https://github.com/arboss/angular-picklist.git
+```
+
 ##Usage
 
 include CSS and Javascript:
