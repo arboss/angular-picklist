@@ -8,6 +8,6 @@
   "homepage": "https://github.com/arboss/angular-picklist",
   "dependencies": {
     "angular": "",
-    "lodash": "~2.4.1"
+    "lodash": "~3.9.2"
   }
 }
